@@ -22,20 +22,22 @@ apply plugin: 'io.spring.dependency-management'
 //
 
 dependencies {
-    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
-    implementation('org.springframework.boot:spring-boot-starter-web')
-    implementation('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
 //    runtimeOnly('org.springframework.boot:spring-boot-devtools')
-    implementation 'org.springframework.boot:spring-boot-starter-activemq:2.1.0.RELEASE'
-    runtimeOnly('mysql:mysql-connector-java')
+    compile 'org.springframework.boot:spring-boot-starter-activemq:2.1.0.RELEASE'
+    runtime('mysql:mysql-connector-java')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
-    implementation('org.springframework.boot:spring-boot-starter-data-redis')
+    compile('org.springframework.boot:spring-boot-starter-data-redis')
     compile project(":admin-common")
     compile project(":admin-pojo")
     compile project(":admin-dao")
     compile project(":admin-interface")
-    implementation 'com.github.pagehelper:pagehelper:3.7.5'
-    implementation 'cn.springcloud.dubbo:spring-cloud-dubbo-starter:1.0.0'
-    implementation 'com.alibaba:druid:1.1.12'
-    implementation 'org.apache.activemq:activemq-pool:5.15.7'
+    compile 'com.github.pagehelper:pagehelper:3.7.5'
+//    runtime 'cn.springcloud.dubbo:spring-cloud-dubbo-starter:1.0.0'
+    compile 'com.alibaba.boot:dubbo-spring-boot-starter:0.2.0'
+    compile 'com.alibaba:druid:1.1.12'
+    compile 'org.apache.activemq:activemq-pool:5.15.7'
+    runtime 'com.github.sgroschupf:zkclient:0.1'
 }
