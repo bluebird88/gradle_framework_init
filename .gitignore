@@ -13,6 +13,9 @@ cmake-build-*/
 # all build output
 **/build
 
+# all gradle meta folder
+.gradle/
+
 # File-based project format
 *.iws
 
