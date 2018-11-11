@@ -37,4 +37,5 @@ dependencies {
     implementation 'com.github.pagehelper:pagehelper:3.7.5'
     implementation 'cn.springcloud.dubbo:spring-cloud-dubbo-starter:1.0.0'
     implementation 'com.alibaba:druid:1.1.12'
+    implementation 'org.apache.activemq:activemq-pool:5.15.7'
 }
