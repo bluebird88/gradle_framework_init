@@ -1,0 +1,8 @@
+rootProject.name = 'root_project'
+
+include 'admin-common'
+include 'admin-pojo'
+include 'admin-interface'
+include 'admin-dao'
+include 'admin-service'
+include 'admin-web'

@@ -1,0 +1,40 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+////
+//apply plugin: 'java'
+//apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+//
+
+//group = 'com.dreamworks'
+//version = '0.0.1-SNAPSHOT'
+//sourceCompatibility = 1.8
+//
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
+//    runtimeOnly('org.springframework.boot:spring-boot-devtools')
+    implementation 'org.springframework.boot:spring-boot-starter-activemq:2.1.0.RELEASE'
+    runtimeOnly('mysql:mysql-connector-java')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    implementation('org.springframework.boot:spring-boot-starter-data-redis')
+    compile project(":admin-common")
+    compile project(":admin-pojo")
+    compile project(":admin-dao")
+    compile project(":admin-interface")
+    implementation 'com.github.pagehelper:pagehelper:3.7.5'
+    implementation 'cn.springcloud.dubbo:spring-cloud-dubbo-starter:1.0.0'
+    implementation 'com.alibaba:druid:1.1.12'
+}

@@ -1,0 +1,6 @@
+
+dependencies {
+    compile project(":admin-common")
+    compile project(":admin-pojo")
+    compile project(":admin-interface")
+}
